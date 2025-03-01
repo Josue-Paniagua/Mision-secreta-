@@ -7,6 +7,7 @@ class Program
 {
     static void Main()
     {
+        //gracias a un switch y un do while puedo hacer un menu para que el usuario pueda elegir que opcion quiere hacer
         int opcion;
         do
         {
@@ -101,6 +102,7 @@ class Program
 
     static void AgregarInvento(string invento)
     {
+        //agregro un appedn all text para que se agregue el invento sin que me borre datos que yo ya tengp en el archivo
         try
         {
             File.AppendAllText("inventos.txt", invento + "\n");
@@ -133,6 +135,7 @@ class Program
 
     static void LeerTodoElTexto()
     {
+        //con un file read all text  ,e ayuda a que se lee todo el archivo 
         try
         {
             string contenido = File.ReadAllText("inventos.txt");
@@ -144,7 +147,8 @@ class Program
         }
     }
     static void CopiarArchivo(string origen, string destino)
-    {
+    {//creo la ruta en la cual quiero que mi archivo sea copiado
+
         try
         {
             Directory.CreateDirectory(Path.GetDirectoryName(destino));
@@ -156,6 +160,7 @@ class Program
 
     static void MoverArchivo(string archivo1, string destino)
     {
+        //creo la ruta en la cual quiero que mi archivo sea movido
         string path = "C:\\Users\\HP\\OneDrive\\Escritorio\\3r semestre 2025\\Programacion 1 2025\\LaboStark\\inventos";
         Console.WriteLine($"La ruta de la carpeta donde se moverá el archivo es: {destino}");
 
@@ -176,6 +181,8 @@ class Program
     }
     static void CrearCarpeta(string nombreCarpeta)
     {
+        //gracias al directory.create directory puedo crear una carpeta y que auntoamticamnte me de donde esciribi el nombre de la carpeta
+
         try
         {
             Directory.CreateDirectory(nombreCarpeta);

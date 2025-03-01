@@ -154,19 +154,19 @@ class Program
         catch (Exception err) { Console.WriteLine($"Error: {err.Message}"); }
     }
 
-    static void MoverArchivo(string archivo1, string lugarDestino)
+    static void MoverArchivo(string archivo1, string destino)
     {
-        string rutaCarpetaDestino = Path.GetDirectoryName(lugarDestino);
-        Console.WriteLine($"La ruta de la carpeta donde se moverá el archivo es: {rutaCarpetaDestino}");
+        string path = "C:\\Users\\HP\\OneDrive\\Escritorio\\3r semestre 2025\\Programacion 1 2025\\LaboStark\\inventos";
+        Console.WriteLine($"La ruta de la carpeta donde se moverá el archivo es: {destino}");
 
-        if (!Directory.Exists(rutaCarpetaDestino))
+        if (!Directory.Exists(destino))
         {
-            Directory.CreateDirectory(rutaCarpetaDestino);
+            Directory.CreateDirectory(destino);
         }
 
         try
         {
-            File.Move(archivo1, lugarDestino);
+            File.Move(archivo1, destino);
             Console.WriteLine("Archivo movido exitosamente.");
         }
         catch (Exception e)
@@ -205,3 +205,6 @@ class Program
 
 
 }
+
+
+
